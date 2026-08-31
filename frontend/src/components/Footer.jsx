@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import VardhaLogo from '../assets/VardhaLogo';
 import { SITE_CONFIG } from '../data/config';
-import { Mail, Phone, Globe, ShieldCheck, ArrowUpRight } from 'lucide-react';
+import { Mail, Phone, Globe, ShieldCheck, ArrowUpRight, Send } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -14,6 +15,10 @@ export default function Footer() {
             <p className="footer-brand-desc" style={{ marginTop: '16px' }}>
               Official Hiring &amp; Selection Portal for Vardha Links. Connecting shortlisted candidates with assigned project access via Google Drive.
             </p>
+            <Link to="/apply" className="btn-footer-vacancy">
+              <Send size={14} />
+              Vacancy
+            </Link>
 
           </div>
 

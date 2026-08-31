@@ -17,7 +17,7 @@ export default function Header() {
           </div>
           <Link to="/apply" className="btn-apply-now">
             <Send size={14} />
-            <span>Apply Now</span>
+            <span>Vacancy</span>
           </Link>
         </div>
       </div>
