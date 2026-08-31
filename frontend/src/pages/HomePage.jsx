@@ -81,6 +81,11 @@ export default function HomePage() {
                 ACCESS GOOGLE DRIVE
                 <ExternalLink size={14} />
               </a>
+
+              <p style={{ fontSize: '12px', color: '#047857', backgroundColor: '#ECFDF5', border: '1px solid #A7F3D0', padding: '8px 12px', borderRadius: '8px', marginTop: '12px', textAlign: 'center', fontWeight: '600' }}>
+                💡 Note: Out of the 2 available projects in the Drive folder, you are required to complete <strong>only one (1) project</strong>.
+              </p>
+
               <button className="btn-modal-close" onClick={() => setModalCandidate(null)}>
                 Close Window
               </button>

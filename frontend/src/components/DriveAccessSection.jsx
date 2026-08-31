@@ -28,6 +28,25 @@ export default function DriveAccessSection() {
             Your project/task will be available through Google Drive. Please open the Drive link using your registered email ID.
           </p>
 
+          <div style={{
+            background: 'rgba(16, 185, 129, 0.14)',
+            border: '1px solid rgba(163, 230, 53, 0.4)',
+            borderRadius: '12px',
+            padding: '12px 20px',
+            margin: '0 auto 24px',
+            maxWidth: '580px',
+            textAlign: 'left',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '12px',
+            backdropFilter: 'blur(8px)'
+          }}>
+            <Check className="flex-shrink-0" size={22} style={{ color: '#A3E635', flexShrink: 0 }} />
+            <span style={{ fontSize: '13.5px', color: '#FFFFFF', fontWeight: '500', lineHeight: '1.5' }}>
+              <strong>Important Note:</strong> Out of the 2 projects available in the Drive folder, candidates are required to complete <strong>only one (1) project</strong> of their choice.
+            </span>
+          </div>
+
           <div className="drive-buttons">
             <a href={SITE_CONFIG.googleDriveUrl} target="_blank" rel="noopener noreferrer" className="btn-drive">
               OPEN GOOGLE DRIVE

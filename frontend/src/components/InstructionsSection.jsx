@@ -52,9 +52,9 @@ export default function InstructionsSection() {
               <AlertTriangle size={20} />
             </div>
             <div>
-              <div className="warning-title">Access Security Notice</div>
+              <div className="warning-title">Access & Task Submission Guidelines</div>
               <p className="warning-text">
-                <strong>Important:</strong> Please use only your registered email ID to access the assigned project. Access may not be available from another email account.
+                <strong>Important:</strong> There are 2 projects available in the Google Drive folder, but candidates are <strong>required to complete and submit only one (1) project</strong> of their choice. Please access your assigned folder strictly using your registered email ID.
               </p>
             </div>
           </div>
