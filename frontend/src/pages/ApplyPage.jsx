@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Send, User, Mail, Phone, Briefcase, FileText, Info } from 'lucide-react';
+import { ArrowLeft, Send, Briefcase, CalendarCheck, ExternalLink, Info } from 'lucide-react';
+
+const CALENDLY_URL = 'https://calendly.com/vardhalinks/interviewinvitees';
 
 export default function ApplyPage() {
   return (
@@ -28,25 +30,34 @@ export default function ApplyPage() {
                     <Briefcase size={13} />
                     Career Opportunity
                   </div>
-                  <h1 className="apply-title">Apply Now</h1>
+                  <h1 className="apply-title">Application Form</h1>
                   <p className="apply-subtitle">
-                    Submit your application to join Vardha Links. Fill in all the required details below.
+                    Submit your application to join Vardha Links. Schedule your interview slot below.
                   </p>
                 </div>
               </div>
 
-              {/* Placeholder — form fields will be added later */}
-              <div className="apply-form-placeholder">
-                <div className="apply-form-placeholder-icon">
-                  <FileText size={32} />
+              <div className="apply-calendly-box">
+                <div className="apply-calendly-icon">
+                  <CalendarCheck size={36} />
                 </div>
-                <h3>Application Form Coming Soon</h3>
+                <h3>Schedule Your Interview</h3>
                 <p>
-                  The application form fields are being configured. Please check back shortly — form fields will be added here.
+                  Click the button below to book your interview slot via Calendly. Choose a time that works best for you.
                 </p>
+                <a
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-calendly"
+                >
+                  <CalendarCheck size={18} />
+                  Apply — Book Interview Slot
+                  <ExternalLink size={14} />
+                </a>
                 <div className="apply-info-tag">
                   <Info size={14} />
-                  Form fields will be specified and added by the Vardha Links team
+                  You will be redirected to Calendly to select your preferred interview time
                 </div>
               </div>
             </div>
