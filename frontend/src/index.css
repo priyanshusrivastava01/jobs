@@ -248,6 +248,84 @@ img { max-width: 100%; display: block; }
   line-height: 1.7;
 }
 
+/* ── Hero Reward Highlight Card ─────────────────────────────────────────── */
+.hero-reward-card {
+  max-width: 620px;
+  margin: 0 auto 32px;
+  background: linear-gradient(135deg, #062316 0%, #0A3A24 60%, #135336 100%);
+  border-radius: 20px;
+  border: 1px solid #10B981;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(6,35,22,0.18);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero-reward-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+  color: #78350F;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(254,243,199,0.3);
+}
+
+.hero-reward-content h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.hero-reward-content h3 .icon-award {
+  color: #A3E635;
+}
+
+.hero-reward-content p {
+  font-size: 13px;
+  color: #D1E8DC;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.hero-reward-content p strong {
+  color: #A3E635;
+  font-weight: 700;
+}
+
+.hero-reward-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 12px;
+  background: rgba(16,185,129,0.18);
+  border: 1px solid rgba(16,185,129,0.35);
+  color: #A3E635;
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.hero-reward-link:hover {
+  background: rgba(16,185,129,0.3);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
 .hero-stats {
   display: inline-flex;
   flex-wrap: wrap;
@@ -1048,6 +1126,32 @@ img { max-width: 100%; display: block; }
   color: #8CA89A;
 }
 
+.cert-preview-image-wrapper {
+  background: #fff;
+  border: 1px solid #D5E8DC;
+  border-radius: 16px;
+  padding: 12px;
+  margin-bottom: 20px;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 8px 24px rgba(10,58,36,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-preview-image-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(10,58,36,0.12);
+}
+
+.cert-preview-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  object-fit: contain;
+}
+
 .cert-preview-footer {
   display: inline-flex;
   align-items: center;
@@ -1835,12 +1939,12 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 640px) {
   .btn-apply-now {
-    padding: 7px 12px;
-    font-size: 11px;
+    padding: 6px 13px;
+    font-size: 12px;
     gap: 5px;
+    border-radius: 8px;
   }
-  .btn-apply-now span { display: none; }
-  .btn-apply-now { padding: 8px; border-radius: 8px; }
+  .btn-apply-now span { display: inline; }
 }
 
 /* ── Apply Page ────────────────────────────────────────────────────────── */
@@ -2055,9 +2159,267 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 640px) {
-  .apply-card-body { padding: 24px; }
+  .apply-card-body { padding: 20px 16px; }
   .apply-title { font-size: 22px; }
-  .apply-header { flex-direction: column; gap: 12px; }
+  .apply-header { flex-direction: row; align-items: center; gap: 12px; }
+  .apply-icon-box { width: 44px; height: 44px; border-radius: 12px; }
+  .apply-icon-box svg { width: 20px; height: 20px; }
+  .btn-calendly { width: 100%; padding: 14px 18px; font-size: 14px; }
+}
+
+/* ── Mobile Responsive Enhancements (320px to 768px) ────────────────────── */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .header-inner {
+    height: 56px;
+  }
+
+  .header-logo-img {
+    height: 32px !important;
+  }
+
+  .hero {
+    padding: 32px 0 40px;
+  }
+
+  .hero-tag {
+    font-size: 11px;
+    padding: 4px 12px;
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .hero h2 {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .hero-desc {
+    font-size: 14px;
+    padding: 0 4px;
+    margin-bottom: 20px;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    padding: 12px;
+  }
+
+  .hero-stat-divider {
+    display: none;
+  }
+
+  .candidates-section {
+    padding: 36px 0;
+  }
+
+  .candidates-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .candidate-card-body {
+    padding: 16px;
+  }
+
+  .candidate-details {
+    padding: 10px 12px;
+  }
+
+  .detail-row {
+    font-size: 11px;
+  }
+
+  .detail-value {
+    word-break: break-all;
+  }
+
+  .instructions-section {
+    padding: 36px 0;
+  }
+
+  .instructions-card {
+    padding: 20px 16px;
+    border-radius: 16px;
+  }
+
+  .instructions-header {
+    gap: 12px;
+  }
+
+  .instructions-icon-box {
+    width: 40px;
+    height: 40px;
+  }
+
+  .instructions-title {
+    font-size: 18px;
+  }
+
+  .instructions-subtitle {
+    font-size: 13px;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .step-card {
+    padding: 14px;
+  }
+
+  .warning-box {
+    padding: 12px 14px;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .certificate-section {
+    padding: 36px 0;
+  }
+
+  .cert-highlights {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .cert-highlight-card {
+    padding: 14px;
+  }
+
+  .cert-notice {
+    padding: 14px;
+    flex-direction: row;
+  }
+
+  .cert-notice-text {
+    font-size: 12px;
+  }
+
+  .cert-preview-box {
+    padding: 20px 14px;
+    border-radius: 16px;
+  }
+
+  .cert-preview-title {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .cert-preview-placeholder-inner {
+    padding: 36px 16px;
+  }
+
+  .drive-section {
+    padding: 36px 0;
+  }
+
+  .drive-card {
+    padding: 32px 16px;
+    border-radius: 18px;
+  }
+
+  .drive-title {
+    font-size: 22px;
+  }
+
+  .drive-desc {
+    font-size: 13px;
+  }
+
+  .drive-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-drive, .btn-copy {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+
+  .drive-security-tag {
+    font-size: 10px;
+    padding: 5px 12px;
+  }
+
+  .footer {
+    padding: 32px 0 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer-contacts {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .btn-footer-vacancy {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .modal-content {
+    max-width: 95%;
+    margin: 0 10px;
+  }
+
+  .modal-body {
+    padding: 20px 16px;
+  }
+
+  .modal-record-value {
+    word-break: break-all;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .apply-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cert-notice {
+    flex-direction: column;
+  }
+
+  .warning-box {
+    flex-direction: column;
+  }
 }
 
 /* ── Scrollbar ──────────────────────────────────────────────────────────── */

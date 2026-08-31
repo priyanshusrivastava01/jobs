@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, CheckCircle2, Award } from 'lucide-react';
+import { Sparkles, CheckCircle2, Award, Trophy, ArrowDown } from 'lucide-react';
 
 export default function HeroSection() {
   return (
@@ -16,7 +16,7 @@ export default function HeroSection() {
         </div>
 
         <h1>
-          SELECTED <span className="gradient-text">CANDIDATES</span>
+          SHORTLISTED <span className="gradient-text">CANDIDATES</span>
         </h1>
 
         <h2>
@@ -26,6 +26,27 @@ export default function HeroSection() {
         <p className="hero-desc">
           Congratulations to all shortlisted candidates. Please follow the instructions below to access your assigned project/task.
         </p>
+
+        {/* Hero Reward Highlight Card */}
+        <div className="hero-reward-card">
+          <div className="hero-reward-badge">
+            <Trophy size={15} />
+            <span>Guaranteed Reward</span>
+          </div>
+          <div className="hero-reward-content">
+            <h3>
+              <Award size={18} className="icon-award" />
+              Certificate of Completion for Every Candidate
+            </h3>
+            <p>
+              Submit your completed project by <strong>7 September, 12:00 AM (Midnight)</strong> to receive an official Vardha Links Certificate — regardless of final selection!
+            </p>
+            <a href="#certificate-rewards" className="hero-reward-link">
+              <span>View Certificate Sample &amp; Rules</span>
+              <ArrowDown size={14} />
+            </a>
+          </div>
+        </div>
 
         <div className="hero-stats">
           <div className="hero-stat-item">

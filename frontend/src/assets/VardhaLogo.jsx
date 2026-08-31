@@ -9,6 +9,7 @@ export const VardhaLogo = ({ variant = "default" }) => {
       <img
         src={logoSrc}
         alt="Vardha Links"
+        className="header-logo-img"
         style={{
           height: '40px',
           width: 'auto',

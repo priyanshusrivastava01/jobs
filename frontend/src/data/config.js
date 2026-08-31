@@ -9,7 +9,7 @@ export const SITE_CONFIG = {
   supportEmail: "info@vardha.live",
   whatsappNumber: "9670111167",
   whatsappFormatted: "+91 9670111167",
-  googleDriveUrl: "#", // Replace with your actual Google Drive URL
+  googleDriveUrl: "https://drive.google.com/drive/folders/1End5s4g2EkHnBSe7NyW0Nd_cILO0cvUr?usp=sharing",
   copyrightYear: new Date().getFullYear(),
   portalTitle: "Selected Candidates Portal",
 };

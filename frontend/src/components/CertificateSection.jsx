@@ -1,5 +1,6 @@
 import React from 'react';
-import { Award, Clock, CheckCircle2, AlertTriangle, Trophy, CalendarClock, Zap, FileCheck } from 'lucide-react';
+import { Award, CheckCircle2, AlertTriangle, Trophy, CalendarClock, Zap, FileCheck } from 'lucide-react';
+import certificateImg from '../assets/certificate.png';
 
 export default function CertificateSection() {
   return (
@@ -82,16 +83,17 @@ export default function CertificateSection() {
           </div>
           <h3 className="cert-preview-title">Sample Certificate Design</h3>
 
-          <div className="cert-preview-placeholder">
-            <div className="cert-preview-placeholder-inner">
-              <Award size={48} />
-              <p>Certificate preview image will be added here</p>
-            </div>
+          <div className="cert-preview-image-wrapper">
+            <img
+              src={certificateImg}
+              alt="Vardha Links Certificate of Project Completion"
+              className="cert-preview-img"
+            />
           </div>
 
           <div className="cert-preview-footer">
             <CheckCircle2 size={14} />
-            Actual certificate will be issued upon successful project completion
+            Official certificate issued by Vardha Links upon successful project completion
           </div>
         </div>
       </div>

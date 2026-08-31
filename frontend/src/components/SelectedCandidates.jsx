@@ -20,7 +20,7 @@ export default function SelectedCandidates({ onViewDetails }) {
               <UserCheck size={13} />
               Official List
             </div>
-            <h2 className="section-title">Selected Candidates</h2>
+            <h2 className="section-title">Shortlisted Candidates</h2>
             <p className="section-subtitle">
               Candidates listed below have been officially shortlisted by Vardha Links. Locate your name to proceed to task instructions.
             </p>

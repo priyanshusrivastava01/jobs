@@ -8,7 +8,7 @@ import DriveAccessSection from '../components/DriveAccessSection';
 import CertificateSection from '../components/CertificateSection';
 import Footer from '../components/Footer';
 import { SITE_CONFIG } from '../data/config';
-import { X, ExternalLink, HardDrive, ShieldCheck, Mail, Calendar, Folder } from 'lucide-react';
+import { X, ExternalLink, HardDrive, ShieldCheck, Mail, Phone, Calendar, Folder } from 'lucide-react';
 
 export default function HomePage() {
   const [modalCandidate, setModalCandidate] = useState(null);
@@ -53,12 +53,18 @@ export default function HomePage() {
 
               <div className="modal-records">
                 <div className="modal-record-row">
-                  <span className="modal-record-label"><ShieldCheck size={14} /> Candidate ID:</span>
-                  <span className="modal-record-value mono">{modalCandidate.id}</span>
+                  <span className="modal-record-label"><ShieldCheck size={14} /> Candidate Ref:</span>
+                  <span className="modal-record-value mono">{modalCandidate.projectCode}</span>
                 </div>
                 <div className="modal-record-row">
-                  <span className="modal-record-label"><Mail size={14} /> Registered Email:</span>
-                  <span className="modal-record-value mono">{modalCandidate.registeredEmailHint}</span>
+                  <span className="modal-record-label"><Phone size={14} /> Contact Number:</span>
+                  <span className="modal-record-value mono">{modalCandidate.phone}</span>
+                </div>
+                <div className="modal-record-row">
+                  <span className="modal-record-label"><Mail size={14} /> Email Address:</span>
+                  <span className="modal-record-value mono" style={{ fontSize: '11px', wordBreak: 'break-all' }}>
+                    {modalCandidate.email}
+                  </span>
                 </div>
                 <div className="modal-record-row">
                   <span className="modal-record-label"><Folder size={14} /> Drive Folder:</span>
