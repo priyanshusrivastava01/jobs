@@ -1,0 +1,26 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import VardhaLogo from '../assets/VardhaLogo';
+import { ShieldCheck, Send } from 'lucide-react';
+
+export default function Header() {
+  return (
+    <header className="header">
+      <div className="container header-inner">
+        <Link to="/" className="header-left">
+          <VardhaLogo />
+        </Link>
+        <div className="header-right">
+          <div className="header-nav-badge">
+            <ShieldCheck size={14} />
+            <span>Candidate Selection</span>
+          </div>
+          <Link to="/apply" className="btn-apply-now">
+            <Send size={14} />
+            <span>Apply Now</span>
+          </Link>
+        </div>
+      </div>
+    </header>
+  );
+}
