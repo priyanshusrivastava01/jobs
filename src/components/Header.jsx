@@ -10,10 +10,7 @@ export default function Header() {
           <VardhaLogo />
         </a>
         <div className="header-right">
-          <div className="header-domain-badge">
-            <span className="dot"></span>
-            <span>job.vardha.live</span>
-          </div>
+
           <div className="header-nav-badge">
             <ShieldCheck size={14} />
             <span>Candidate Selection</span>

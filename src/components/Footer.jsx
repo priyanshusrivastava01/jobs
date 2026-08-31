@@ -14,10 +14,7 @@ export default function Footer() {
             <p className="footer-brand-desc" style={{ marginTop: '16px' }}>
               Official Hiring &amp; Selection Portal for Vardha Links. Connecting shortlisted candidates with assigned project access via Google Drive.
             </p>
-            <div className="footer-portal-tag">
-              <ShieldCheck size={13} />
-              Official Portal: {SITE_CONFIG.subdomain}
-            </div>
+
           </div>
 
           <div>

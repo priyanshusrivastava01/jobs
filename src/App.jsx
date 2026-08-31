@@ -4,7 +4,6 @@ import HeroSection from './components/HeroSection';
 import SelectedCandidates from './components/SelectedCandidates';
 import InstructionsSection from './components/InstructionsSection';
 import DriveAccessSection from './components/DriveAccessSection';
-import ProjectSection from './components/ProjectSection';
 import Footer from './components/Footer';
 import { SITE_CONFIG } from './data/config';
 import { X, ExternalLink, HardDrive, ShieldCheck, Mail, Calendar, Folder } from 'lucide-react';
@@ -20,7 +19,6 @@ export default function App() {
         <SelectedCandidates onViewDetails={c => setModalCandidate(c)} />
         <InstructionsSection />
         <DriveAccessSection />
-        <ProjectSection selectedCandidate={modalCandidate} />
       </main>
       <Footer />
 

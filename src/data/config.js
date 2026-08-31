@@ -3,7 +3,7 @@
 
 export const SITE_CONFIG = {
   companyName: "Vardha Links",
-  subdomain: "job.vardha.live",
+
   mainWebsite: "https://web.vardha.live",
   mainWebsiteLabel: "web.vardha.live",
   supportEmail: "info@vardha.live",
