@@ -15,7 +15,7 @@ export default function Footer() {
             <p className="footer-brand-desc" style={{ marginTop: '16px' }}>
               Official Hiring &amp; Selection Portal for Vardha Links. Connecting shortlisted candidates with assigned project access via Google Drive.
             </p>
-            <Link to="/apply" className="btn-footer-vacancy">
+            <Link to="/vacancy" className="btn-footer-vacancy">
               <Send size={14} />
               Vacancy
             </Link>

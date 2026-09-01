@@ -83,6 +83,18 @@ export const CANDIDATES_DATA = [
     driveFolderName: "Vardha_Task_ArchanaSharma"
   },
   {
+    id: "cand_15",
+    name: "Gaurav",
+    phone: "+91 8765187016",
+    email: "gauravt7848@gmail.com",
+    status: "SHORTLISTED",
+    assignedTaskStatus: "Access Granted via Drive",
+    role: "In association with Yuvan Vision",
+    assignedDate: "2026-08-31",
+    projectCode: "VL-PRJ-2026-15",
+    driveFolderName: "Vardha_Task_Gaurav"
+  },
+  {
     id: "cand_01",
     name: "Harshit Maurya",
     phone: "+91 6387276254",

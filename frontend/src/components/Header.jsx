@@ -11,7 +11,7 @@ export default function Header() {
           <VardhaLogo />
         </Link>
         <div className="header-right">
-          <Link to="/apply" className="btn-apply-now">
+          <Link to="/vacancy" className="btn-apply-now">
             <Send size={14} />
             <span>Vacancy</span>
           </Link>
