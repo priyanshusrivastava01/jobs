@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Briefcase, Lock, FileText, Calendar, FolderGit2, FileSpreadsheet, UploadCloud, Eye, Info } from 'lucide-react';
+import { Briefcase, Lock, FileText, Calendar, FolderGit2, FileSpreadsheet, UploadCloud, Eye, Info, ExternalLink } from 'lucide-react';
+import { SITE_CONFIG } from '../data/config';
 
 export default function ProjectSection({ selectedCandidate }) {
   const [showSchema, setShowSchema] = useState(false);
@@ -27,7 +28,31 @@ export default function ProjectSection({ selectedCandidate }) {
               <Lock size={24} />
             </div>
             <h3>Project Access Pending Verification</h3>
-            <p>Your assigned project details will appear here after access is provided through Google Drive.</p>
+            <p>Your assigned project details and task files are available in the official Google Drive folder.</p>
+            <div style={{ margin: '20px 0 10px', display: 'flex', justifyContent: 'center' }}>
+              <a
+                href={SITE_CONFIG.googleDriveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-drive"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  padding: '12px 24px',
+                  fontSize: '14px',
+                  fontWeight: 700,
+                  borderRadius: '10px',
+                  background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
+                  color: '#FFFFFF',
+                  textDecoration: 'none',
+                  boxShadow: '0 4px 14px rgba(16, 185, 129, 0.4)'
+                }}
+              >
+                OPEN ASSIGNED PROJECT DRIVE
+                <ExternalLink size={16} />
+              </a>
+            </div>
             <div className="project-info-tag">
               <Info size={14} style={{ color: '#10B981' }} />
               Drive links are updated continuously by the Vardha Links HR Team
@@ -56,7 +81,7 @@ export default function ProjectSection({ selectedCandidate }) {
               <div className="schema-block">
                 <div style={{ marginBottom: '12px' }}>
                   <div className="label"><Calendar size={12} /> Submission Deadline</div>
-                  <div className="value">7 Days From Access</div>
+                  <div className="value">7 September, 12:00 AM (Midnight)</div>
                 </div>
                 <div>
                   <div className="label">Required Deliverable</div>
@@ -66,10 +91,16 @@ export default function ProjectSection({ selectedCandidate }) {
             </div>
 
             <div className="schema-resources">
-              <div className="schema-resource">
+              <a
+                href={SITE_CONFIG.googleDriveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="schema-resource"
+                style={{ textDecoration: 'none', color: 'inherit' }}
+              >
                 <span className="schema-resource-left"><FolderGit2 size={14} /> Google Drive Folder</span>
-                <span className="linked">Linked</span>
-              </div>
+                <span className="linked" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>Open Drive <ExternalLink size={12} /></span>
+              </a>
               <div className="schema-resource">
                 <span className="schema-resource-left"><FileSpreadsheet size={14} /> Google Sheet Tracker</span>
                 <span className="linked">Linked</span>
