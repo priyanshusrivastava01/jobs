@@ -2943,9 +2943,154 @@ img { max-width: 100%; display: block; }
 .ofa-entry-desc {
   font-size: 16px;
   color: #D1E8DC;
-  max-width: 540px;
+  max-width: 580px;
   margin: 0 auto 28px;
   line-height: 1.7;
+}
+
+/* ── Candidate Benefits & Perks Showcase ───────────────────────────────── */
+.ofa-perks-container {
+  margin-bottom: 48px;
+}
+
+.ofa-perks-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.ofa-perks-main-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #062316;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.ofa-perks-main-subtitle {
+  font-size: 14.5px;
+  color: #547063;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.ofa-perks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .ofa-perks-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ofa-perk-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  border: 1.5px solid #E0ECE4;
+  padding: 28px 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(10, 58, 36, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.ofa-perk-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(10, 58, 36, 0.08);
+}
+
+.ofa-perk-card--cert {
+  border-top: 5px solid #10B981;
+}
+
+.ofa-perk-card--prize {
+  border-top: 5px solid #F59E0B;
+}
+
+.ofa-perk-card--job {
+  border-top: 5px solid #2563EB;
+}
+
+.ofa-perk-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.ofa-perk-icon-box.cert {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10B981;
+}
+
+.ofa-perk-icon-box.prize {
+  background: rgba(245, 158, 11, 0.12);
+  color: #D97706;
+}
+
+.ofa-perk-icon-box.job {
+  background: rgba(37, 99, 235, 0.12);
+  color: #2563EB;
+}
+
+.ofa-perk-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.ofa-perk-badge.cert {
+  background: #DCFCE7;
+  color: #15803D;
+  border: 1px solid #86EFAC;
+}
+
+.ofa-perk-badge.prize {
+  background: #FEF3C7;
+  color: #B45309;
+  border: 1px solid #FCD34D;
+}
+
+.ofa-perk-badge.job {
+  background: #DBEAFE;
+  color: #1D4ED8;
+  border: 1px solid #93C5FD;
+}
+
+.ofa-perk-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #062316;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.ofa-perk-desc {
+  font-size: 13.5px;
+  color: #547063;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+.ofa-perk-desc strong {
+  color: #062316;
+  font-weight: 700;
 }
 
 /* ── Shared Button Styles ──────────────────────────────────────────────── */
@@ -3403,98 +3548,290 @@ img { max-width: 100%; display: block; }
   margin-bottom: 28px;
 }
 
-/* ── WhatsApp Project Confirmation Box inside Drive Card ── */
-.ofa-drive-confirm-box {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(16, 185, 129, 0.25);
-  border-radius: 18px;
-  padding: 26px 24px;
-  max-width: 680px;
-  margin: 0 auto;
-  backdrop-filter: blur(12px);
-}
-
-.ofa-drive-confirm-badge {
+/* ── Step 1 Drive Card Tag ────────────────────────────────────────────── */
+.ofa-drive-step-tag {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(37, 211, 102, 0.16);
-  border: 1px solid rgba(37, 211, 102, 0.35);
-  color: #25D366;
+  background: rgba(163, 230, 53, 0.15);
+  border: 1px solid rgba(163, 230, 53, 0.35);
+  color: #A3E635;
   font-size: 10.5px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   padding: 4px 12px;
   border-radius: 20px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
-.ofa-drive-confirm-title {
-  font-size: 17px;
-  font-weight: 700;
+/* ── Step 2 WhatsApp Confirmation Card ─────────────────────────────────── */
+.ofa-confirm-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  border: 2px solid #BBF7D0;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(10, 58, 36, 0.06);
+  margin-top: 24px;
+  position: relative;
+  text-align: center;
+}
+
+.ofa-confirm-card-top-bar {
+  height: 6px;
+  background: linear-gradient(90deg, #25D366 0%, #128C7E 50%, #10B981 100%);
+}
+
+.ofa-confirm-card-body {
+  padding: 36px 28px;
+}
+
+.ofa-confirm-icon-box {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
   color: #FFFFFF;
-  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
 }
 
-.ofa-drive-confirm-text {
-  font-size: 13px;
-  color: rgba(209, 232, 220, 0.82);
-  line-height: 1.5;
-  max-width: 540px;
-  margin: 0 auto 18px;
+.ofa-confirm-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #DCFCE7;
+  border: 1px solid #86EFAC;
+  color: #15803D;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
 }
 
-.ofa-drive-confirm-details-grid {
+.ofa-confirm-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #062316;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.ofa-confirm-desc {
+  font-size: 14.5px;
+  color: #547063;
+  max-width: 660px;
+  margin: 0 auto 26px;
+  line-height: 1.6;
+}
+
+.ofa-confirm-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 10px;
-  margin-bottom: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  max-width: 720px;
+  margin: 0 auto 28px;
   text-align: left;
 }
 
-.ofa-drive-detail-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(6, 35, 22, 0.65);
-  border: 1px solid rgba(16, 185, 129, 0.18);
-  padding: 9px 12px;
-  border-radius: 10px;
-  font-size: 12px;
-  color: #E0ECE4;
+@media (max-width: 640px) {
+  .ofa-confirm-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-.ofa-detail-dot {
-  width: 20px;
-  height: 20px;
+.ofa-confirm-grid-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  padding: 14px 16px;
+  border-radius: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.ofa-confirm-grid-item:hover {
+  transform: translateY(-2px);
+  border-color: #86EFAC;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.12);
+}
+
+.ofa-confirm-step-dot {
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  background: #10B981;
+  background: #16A34A;
   color: #FFFFFF;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.ofa-confirm-item-content h6 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #062316;
+  margin: 0 0 3px 0;
+}
+
+.ofa-confirm-item-content p {
+  font-size: 12.5px;
+  color: #547063;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.ofa-confirm-cta-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .ofa-btn-whatsapp-lg {
   background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
   color: #FFFFFF !important;
   font-weight: 700;
-  font-size: 14px;
-  padding: 13px 26px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+  font-size: 14.5px;
+  padding: 14px 30px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.38);
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 9px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border: none;
 }
 
 .ofa-btn-whatsapp-lg:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.45);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.5);
+  background: linear-gradient(135deg, #22c35e 0%, #0e786b 100%) !important;
+}
+
+.ofa-confirm-helper-note {
+  font-size: 12.5px;
+  color: #64748B;
+  font-weight: 500;
+}
+
+/* ── Step 3 Execution Card ─────────────────────────────────────────────── */
+.ofa-execution-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  border: 2px solid #E2E8F0;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(10, 58, 36, 0.05);
+  margin-top: 24px;
+  position: relative;
+  text-align: center;
+}
+
+.ofa-execution-card-top-bar {
+  height: 6px;
+  background: linear-gradient(90deg, #F59E0B 0%, #10B981 100%);
+}
+
+.ofa-execution-card-body {
+  padding: 34px 28px;
+}
+
+.ofa-execution-icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+  border: 1px solid #FCD34D;
+  color: #D97706;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: 0 6px 18px rgba(217, 119, 6, 0.15);
+}
+
+.ofa-execution-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FEF3C7;
+  border: 1px solid #FCD34D;
+  color: #B45309;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.ofa-execution-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #062316;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.ofa-execution-desc {
+  font-size: 14.5px;
+  color: #547063;
+  max-width: 660px;
+  margin: 0 auto 24px;
+  line-height: 1.6;
+}
+
+.ofa-execution-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .ofa-execution-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ofa-execution-item {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  padding: 14px 16px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ofa-execution-tag {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #059669;
+  display: inline-block;
+}
+
+.ofa-execution-item p {
+  font-size: 12.5px;
+  color: #475569;
+  margin: 0;
+  line-height: 1.45;
 }
 
 .ofa-projects-grid {
@@ -3895,20 +4232,31 @@ img { max-width: 100%; display: block; }
   line-height: 1.6;
 }
 
-/* ── Google Form Submission Button ──────────────────────────────────────── */
+/* ── Google Form Submission Buttons ─────────────────────────────────────── */
+.ofa-submission-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  max-width: 700px;
+  margin: 0 auto 28px;
+}
+
 .ofa-btn-submit-main {
   background: linear-gradient(135deg, #10B981 0%, #059669 100%) !important;
   color: #FFFFFF !important;
   font-weight: 800;
-  font-size: 14.5px;
+  font-size: 13.5px;
   letter-spacing: 0.02em;
-  padding: 15px 32px;
+  padding: 14px 24px;
   border-radius: 12px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  width: 100%;
+  flex: 1 1 280px;
+  max-width: 320px;
   box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
@@ -3919,6 +4267,16 @@ img { max-width: 100%; display: block; }
   background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
   transform: translateY(-2px);
   box-shadow: 0 12px 28px rgba(16, 185, 129, 0.55);
+}
+
+.ofa-btn-submit-alt {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+  box-shadow: 0 8px 24px rgba(5, 150, 105, 0.38) !important;
+}
+
+.ofa-btn-submit-alt:hover {
+  background: linear-gradient(135deg, #047857 0%, #065F46 100%) !important;
+  box-shadow: 0 12px 28px rgba(5, 150, 105, 0.5) !important;
 }
 
 /* ── What Happens Next Roadmap Card ─────────────────────────────────────── */

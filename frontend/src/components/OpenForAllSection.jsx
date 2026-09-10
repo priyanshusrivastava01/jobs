@@ -23,6 +23,8 @@ import {
   Lock,
   FileText,
   Send,
+  Award,
+  Gift,
 } from 'lucide-react';
 import { SITE_CONFIG } from '../data/config';
 import { OPEN_FOR_ALL_PROJECTS } from '../data/openForAllProjects';
@@ -37,8 +39,8 @@ const PROCESS_STEPS = [
   },
   {
     step: 2,
-    title: 'Confirm on WhatsApp',
-    desc: 'Send your details and selected project name to WhatsApp before starting.',
+    title: 'Confirm on WhatsApp with Resume',
+    desc: 'Share your Resume, contact details, and chosen project name on WhatsApp to get approval before starting.',
     icon: MessageCircle,
   },
   {
@@ -72,7 +74,7 @@ function ProjectCard({ project }) {
   const [expanded, setExpanded] = useState(false);
 
   const whatsappUndertakeUrl = buildWhatsAppUrl(
-    `Hello Vardha Links Team,\n\nI have reviewed the project in Google Drive and would like to confirm my selection:\n• Candidate Name: [Your Name]\n• Selected Project: ${project.name}\n\nPlease confirm my registration.`
+    `Hello Vardha Links Team,\n\nI have reviewed the projects in Google Drive and selected "${project.name}". I have attached my resume with this message:\n\n• Candidate Name: [Your Name]\n• Email / Phone: [Your Contact Details]\n• Selected Project: ${project.name}\n• Resume: (Attached with this chat)\n\nPlease review and confirm my registration so I can start working within the given timeline.`
   );
 
   return (
@@ -158,7 +160,7 @@ export default function OpenForAllSection() {
   };
 
   const whatsappConfirmProjectChoiceUrl = buildWhatsAppUrl(
-    `Hello Vardha Links Team,\n\nI have reviewed the project briefs in Google Drive and selected my project for the Open for All opportunity:\n\n• Candidate Name: [Your Name]\n• Email / Phone: [Your Contact Number]\n• Selected Project Name: [Project Name from Drive]\n• Start Date: [Today's Date]\n\nKindly confirm my registration so I can begin my project work within the given timeline.`
+    `Hello Vardha Links Team,\n\nI have reviewed the project briefs in Google Drive and selected my project for the Open for All opportunity. I have attached my resume with this message:\n\n• Candidate Name: [Your Name]\n• Email ID: [Your Email]\n• Phone Number: [Your Phone Number]\n• Selected Project: [Exact Project Name from Drive]\n• Resume: (Attached with this message)\n\nPlease review and confirm my project undertaking so I can start working within the given timeline.`
   );
 
   return (
@@ -181,13 +183,65 @@ export default function OpenForAllSection() {
             </div>
             <h2 className="ofa-entry-title">Project-Based Opportunity</h2>
             <p className="ofa-entry-desc">
-              Access the Google Drive folder, choose 1 project to build, complete it within the given time, submit your work, and proceed to the final interview.
+              Access the Google Drive folder, choose 1 project to build, complete it within the given time, earn a verified Certificate, win exciting Prizes, and get fast-tracked for Direct Hiring!
             </p>
             <a href="#ofa-projects" className="ofa-btn ofa-btn-primary">
               <HardDrive size={16} />
               Access Project Drive
               <ArrowDown size={14} />
             </a>
+          </div>
+        </div>
+
+        {/* ── Candidate Benefits & Perks Showcase ──────────────────────── */}
+        <div className="ofa-perks-container" id="ofa-perks">
+          <div className="ofa-perks-header">
+            <div className="section-badge">
+              <Award size={13} />
+              Rewards & Opportunities
+            </div>
+            <h3 className="ofa-perks-main-title">What You Gain by Completing the Project</h3>
+            <p className="ofa-perks-main-subtitle">
+              Every participant who undertakes and completes the project receives verifiable credentials, performance rewards, and career opportunities.
+            </p>
+          </div>
+
+          <div className="ofa-perks-grid">
+            {/* Perk 1: Certificate */}
+            <div className="ofa-perk-card ofa-perk-card--cert">
+              <div className="ofa-perk-icon-box cert">
+                <Award size={26} />
+              </div>
+              <div className="ofa-perk-badge cert">GUARANTEED FOR ALL</div>
+              <h4 className="ofa-perk-title">Official Project Certificate</h4>
+              <p className="ofa-perk-desc">
+                Every candidate who completes and submits their chosen project receives an official verified <strong>Certificate of Project Completion</strong> from Vardha Links to enrich their resume and portfolio.
+              </p>
+            </div>
+
+            {/* Perk 2: Prizes */}
+            <div className="ofa-perk-card ofa-perk-card--prize">
+              <div className="ofa-perk-icon-box prize">
+                <Gift size={26} />
+              </div>
+              <div className="ofa-perk-badge prize">FOR TOP PERFORMERS</div>
+              <h4 className="ofa-perk-title">Exciting Prizes & Rewards</h4>
+              <p className="ofa-perk-desc">
+                High-quality, innovative, and exceptionally well-crafted project submissions will be rewarded with <strong>special prizes, tech goodies, and merit recognition</strong> from our team.
+              </p>
+            </div>
+
+            {/* Perk 3: Direct Hiring */}
+            <div className="ofa-perk-card ofa-perk-card--job">
+              <div className="ofa-perk-icon-box job">
+                <Briefcase size={26} />
+              </div>
+              <div className="ofa-perk-badge job">CAREER ADVANCEMENT</div>
+              <h4 className="ofa-perk-title">Direct Hiring & Job Opportunities</h4>
+              <p className="ofa-perk-desc">
+                Demonstrate your practical engineering skills through real-world execution! Top performers get fast-tracked for <strong>direct interviews and high hiring chances</strong> for roles at Vardha Links.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -233,25 +287,30 @@ export default function OpenForAllSection() {
           </div>
         </div>
 
-        {/* ── 3. Google Drive Project Repository & Selection ───────────── */}
+        {/* ── 3. Project Selection & Confirmation Flow ───────────────── */}
         <div className="ofa-projects-area" id="ofa-projects">
           <div className="ofa-section-header">
             <div className="section-badge">
               <HardDrive size={13} />
-              Project Repository
+              Project Repository & Confirmation
             </div>
-            <h3 className="ofa-section-title">Access Projects via Google Drive</h3>
+            <h3 className="ofa-section-title">Access Projects & Confirm Selection</h3>
             <p className="ofa-section-subtitle">
-              All project details, tasks, and guidelines are available in our official Drive folder.
+              Access Google Drive, choose your 1 project, and confirm with your resume on WhatsApp before starting.
             </p>
           </div>
 
+          {/* ── Card 1: Step 1 - Google Drive Project Access ── */}
           <div className="ofa-drive-card">
             <div className="ofa-drive-card-glow-1"></div>
             <div className="ofa-drive-card-glow-2"></div>
 
             <div className="ofa-drive-icon-box">
               <HardDrive size={30} />
+            </div>
+
+            <div className="ofa-drive-step-tag">
+              STEP 1 — CHOOSE YOUR PROJECT
             </div>
 
             <h4 className="ofa-drive-title">Official Projects & Task Files</h4>
@@ -295,51 +354,114 @@ export default function OpenForAllSection() {
               </button>
             </div>
 
-            <div className="ofa-drive-security-tag">
+            <div className="ofa-drive-security-tag" style={{ marginBottom: 0 }}>
               <Lock size={13} />
               <span>Drive Folder • Open with your Google Account</span>
             </div>
+          </div>
 
-            {/* ── WhatsApp Project Selection Confirmation Box ── */}
-            <div className="ofa-drive-confirm-box">
-              <div className="ofa-drive-confirm-header">
-                <div className="ofa-drive-confirm-badge">
-                  <MessageCircle size={13} />
-                  STEP 2 — CONFIRM ON WHATSAPP
-                </div>
-                <h5 className="ofa-drive-confirm-title">Decide & Confirm Your Project</h5>
-                <p className="ofa-drive-confirm-text">
-                  After reviewing the projects in Drive, decide which 1 project you will build and inform us on WhatsApp with your details before starting:
-                </p>
+          {/* ── Card 2: Step 2 - WhatsApp Project Confirmation & Resume Submission ── */}
+          <div className="ofa-confirm-card" id="ofa-confirm">
+            <div className="ofa-confirm-card-top-bar"></div>
+            <div className="ofa-confirm-card-body">
+              <div className="ofa-confirm-icon-box">
+                <MessageCircle size={28} />
               </div>
 
-              <div className="ofa-drive-confirm-details-grid">
-                <div className="ofa-drive-detail-item">
-                  <span className="ofa-detail-dot">1</span>
-                  <span><strong>Candidate Details:</strong> Your Name, Contact & Email</span>
+              <div className="ofa-confirm-badge">
+                <MessageCircle size={13} />
+                STEP 2 — CONFIRM ON WHATSAPP
+              </div>
+
+              <h4 className="ofa-confirm-title">Confirm Project Selection & Share Resume</h4>
+              <p className="ofa-confirm-desc">
+                After exploring projects in Drive, message our team on WhatsApp with your details and <strong>attach your Resume / CV</strong>. Once you receive confirmation from our team, you can proceed with building your project within the given timeline:
+              </p>
+
+              <div className="ofa-confirm-grid">
+                <div className="ofa-confirm-grid-item">
+                  <div className="ofa-confirm-step-dot">1</div>
+                  <div className="ofa-confirm-item-content">
+                    <h6>Candidate Details</h6>
+                    <p>Your Full Name, Email ID & Contact Number</p>
+                  </div>
                 </div>
-                <div className="ofa-drive-detail-item">
-                  <span className="ofa-detail-dot">2</span>
-                  <span><strong>Selected Project:</strong> Exact Project Name from Drive</span>
+
+                <div className="ofa-confirm-grid-item">
+                  <div className="ofa-confirm-step-dot">2</div>
+                  <div className="ofa-confirm-item-content">
+                    <h6>Selected Project</h6>
+                    <p>Exact Project Name chosen from Google Drive</p>
+                  </div>
                 </div>
-                <div className="ofa-drive-detail-item">
-                  <span className="ofa-detail-dot">3</span>
-                  <span><strong>Timeline:</strong> Complete project within given time</span>
+
+                <div className="ofa-confirm-grid-item">
+                  <div className="ofa-confirm-step-dot">3</div>
+                  <div className="ofa-confirm-item-content">
+                    <h6>Attach Resume / CV</h6>
+                    <p>Share your updated Resume file directly in the chat</p>
+                  </div>
+                </div>
+
+                <div className="ofa-confirm-grid-item">
+                  <div className="ofa-confirm-step-dot">4</div>
+                  <div className="ofa-confirm-item-content">
+                    <h6>Team Confirmation</h6>
+                    <p>Start building once confirmed by our team</p>
+                  </div>
                 </div>
               </div>
 
-              <div className="ofa-drive-confirm-action">
+              <div className="ofa-confirm-cta-row">
                 <a
                   href={whatsappConfirmProjectChoiceUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="ofa-btn ofa-btn-whatsapp ofa-btn-whatsapp-lg"
-                  aria-label="Confirm selected project on WhatsApp"
+                  aria-label="Confirm selected project and share resume on WhatsApp"
                 >
-                  <MessageCircle size={18} />
-                  <span>Confirm Selected Project on WhatsApp</span>
+                  <MessageCircle size={19} />
+                  <span>Confirm Project & Share Resume on WhatsApp</span>
                   <ExternalLink size={15} />
                 </a>
+                <span className="ofa-confirm-helper-note">
+                  ⚡ Pre-filled message template will open automatically in WhatsApp.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* ── Card 3: Step 3 - Build Project Within Given Time ── */}
+          <div className="ofa-execution-card" id="ofa-execution">
+            <div className="ofa-execution-card-top-bar"></div>
+            <div className="ofa-execution-card-body">
+              <div className="ofa-execution-icon-box">
+                <Clock size={28} />
+              </div>
+
+              <div className="ofa-execution-badge">
+                <Clock size={13} />
+                STEP 3 — COMPLETE WITHIN GIVEN TIME
+              </div>
+
+              <h4 className="ofa-execution-title">Build & Finalize Your Project</h4>
+              <p className="ofa-execution-desc">
+                After getting official confirmation from our team on WhatsApp, work dedicatedly on your chosen project. Ensure all deliverables, source code, and documentation are completed within the given timeline:
+              </p>
+
+              <div className="ofa-execution-grid">
+                <div className="ofa-execution-item">
+                  <span className="ofa-execution-tag">Scope & Deliverables</span>
+                  <p>Follow all technical requirements and guidelines outlined in the Drive brief.</p>
+                </div>
+                <div className="ofa-execution-item">
+                  <span className="ofa-execution-tag">Time Management</span>
+                  <p>Adhere strictly to your given timeline to ensure eligibility for final evaluation.</p>
+                </div>
+                <div className="ofa-execution-item">
+                  <span className="ofa-execution-tag">Submission Preparation</span>
+                  <p>Keep your code repository, live demo link, or drive files ready for upload.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -367,18 +489,30 @@ export default function OpenForAllSection() {
               Once you have finished your chosen project, upload your work through the official Google Form. After our team evaluates your submission, we will send the interview scheduling link directly to you.
             </p>
 
-            {/* Google Form Submission Action */}
-            <div style={{ margin: '0 auto 28px', maxWidth: '440px' }}>
+            {/* Google Form Submission Actions (Project 1 & Project 2) */}
+            <div className="ofa-submission-buttons">
               <a
-                href={SITE_CONFIG.projectSubmissionFormUrl}
+                href={SITE_CONFIG.project1SubmissionFormUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ofa-btn ofa-btn-submit-main"
-                aria-label="Open Google Form for project submission"
+                aria-label="Submit Project 1 via Google Form"
               >
-                <Upload size={18} />
-                <span>OPEN GOOGLE FORM SUBMISSION</span>
-                <ExternalLink size={16} />
+                <Upload size={17} />
+                <span>SUBMIT PROJECT 1 (GOOGLE FORM)</span>
+                <ExternalLink size={15} />
+              </a>
+
+              <a
+                href={SITE_CONFIG.project2SubmissionFormUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ofa-btn ofa-btn-submit-main ofa-btn-submit-alt"
+                aria-label="Submit Project 2 via Google Form"
+              >
+                <Upload size={17} />
+                <span>SUBMIT PROJECT 2 (GOOGLE FORM)</span>
+                <ExternalLink size={15} />
               </a>
             </div>
 
@@ -423,7 +557,7 @@ export default function OpenForAllSection() {
               <div className="ofa-final-sequence-divider">→</div>
               <div className="ofa-final-sequence-item done">
                 <CheckCircle2 size={13} />
-                <span>2. Confirm (WhatsApp)</span>
+                <span>2. Confirm & Resume (WhatsApp)</span>
               </div>
               <div className="ofa-final-sequence-divider">→</div>
               <div className="ofa-final-sequence-item done">
