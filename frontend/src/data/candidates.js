@@ -21,7 +21,38 @@ export const maskPhone = (phone) => {
   return trimmed;
 };
 
-export const CANDIDATES_DATA = [
+// ── Currently Shortlisted — Latest Batch ─────────────────────────────────────
+// Replace "New Candidate A" and "New Candidate B" with the actual candidate names
+// and fill in their real phone, email, projectCode and driveFolderName when ready.
+export const CURRENT_SHORTLISTED = [
+  {
+    id: "cand_new_01",
+    name: "Pankaj Yadav",
+    phone: "+91 93352 88731",
+    email: "pankajyadavldy@gmail.com",
+    status: "SHORTLISTED",
+    assignedTaskStatus: "Access Granted via Drive",
+    role: "In association with Yuvan Vision",
+    assignedDate: "2026-09-07",
+    projectCode: "VL-PRJ-2026-16",
+    driveFolderName: "Vardha_Task_PankajYadav"
+  },
+  {
+    id: "cand_new_02",
+    name: "Preeti Yadav",
+    phone: "+91 70686 38759",
+    email: "preetiyadav7068@gmail.com",
+    status: "SHORTLISTED",
+    assignedTaskStatus: "Access Granted via Drive",
+    role: "In association with Yuvan Vision",
+    assignedDate: "2026-09-07",
+    projectCode: "VL-PRJ-2026-17",
+    driveFolderName: "Vardha_Task_PreetiYadav"
+  }
+];
+
+// ── Previously Selected Candidates — Earlier Batches ─────────────────────────
+export const PREVIOUSLY_SELECTED = [
   {
     id: "cand_04",
     name: "Abhay Raj Gaur",
@@ -56,7 +87,8 @@ export const CANDIDATES_DATA = [
     role: "In association with Yuvan Vision",
     assignedDate: "2026-08-31",
     projectCode: "VL-PRJ-2026-13",
-    driveFolderName: "Vardha_Task_AkshatSrivastava"
+    driveFolderName: "Vardha_Task_AkshatSrivastava",
+    certified: true
   },
   {
     id: "cand_02",
@@ -152,7 +184,8 @@ export const CANDIDATES_DATA = [
     role: "In association with Yuvan Vision",
     assignedDate: "2026-08-31",
     projectCode: "VL-PRJ-2026-14",
-    driveFolderName: "Vardha_Task_PrashantMishra"
+    driveFolderName: "Vardha_Task_PrashantMishra",
+    certified: true
   },
   {
     id: "cand_10",
@@ -203,3 +236,6 @@ export const CANDIDATES_DATA = [
     driveFolderName: "Vardha_Task_VishwajeetJaiswal"
   }
 ];
+
+// Combined list for search purposes (current first, then previous)
+export const CANDIDATES_DATA = [...CURRENT_SHORTLISTED, ...PREVIOUSLY_SELECTED];

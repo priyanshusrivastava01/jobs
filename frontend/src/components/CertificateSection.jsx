@@ -37,7 +37,7 @@ export default function CertificateSection() {
             </div>
             <div>
               <h4>Submission Deadline</h4>
-              <p><strong>7 September, 12:00 AM (Midnight)</strong> — This is the last date to submit your project. Complete and submit before the deadline.</p>
+              <p><strong>14 September, 12:00 AM (Midnight)</strong> — This is the last date to submit your project. Complete and submit before the deadline.</p>
             </div>
           </div>
 

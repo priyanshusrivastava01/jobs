@@ -39,7 +39,7 @@ export default function HeroSection() {
               Certificate of Completion for Every Candidate
             </h3>
             <p>
-              Submit your completed project by <strong>7 September, 12:00 AM (Midnight)</strong> to receive an official Vardha Links Certificate — regardless of final selection!
+              Submit your completed project by <strong>14 September, 12:00 AM (Midnight)</strong> to receive an official Vardha Links Certificate — regardless of final selection!
             </p>
             <a href="#certificate-rewards" className="hero-reward-link">
               <span>View Certificate Sample &amp; Rules</span>
