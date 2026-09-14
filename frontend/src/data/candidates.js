@@ -22,32 +22,30 @@ export const maskPhone = (phone) => {
 };
 
 // ── Currently Shortlisted — Latest Batch ─────────────────────────────────────
-// Replace "New Candidate A" and "New Candidate B" with the actual candidate names
-// and fill in their real phone, email, projectCode and driveFolderName when ready.
 export const CURRENT_SHORTLISTED = [
   {
-    id: "cand_new_01",
-    name: "Pankaj Yadav",
-    phone: "+91 93352 88731",
-    email: "pankajyadavldy@gmail.com",
+    id: "cand_18",
+    name: "Ronit Maurya",
+    phone: "+91 77850 84553",
+    email: "ronitmaurya993020@gmail.com",
     status: "SHORTLISTED",
     assignedTaskStatus: "Access Granted via Drive",
     role: "In association with Yuvan Vision",
-    assignedDate: "2026-09-07",
-    projectCode: "VL-PRJ-2026-16",
-    driveFolderName: "Vardha_Task_PankajYadav"
+    assignedDate: "2026-09-14",
+    projectCode: "VL-PRJ-2026-18",
+    driveFolderName: "Vardha_Task_RonitMaurya"
   },
   {
-    id: "cand_new_02",
-    name: "Preeti Yadav",
-    phone: "+91 70686 38759",
-    email: "preetiyadav7068@gmail.com",
+    id: "cand_19",
+    name: "Pooja Jaiswal",
+    phone: "+91 63865 37664",
+    email: "pj4881266@gmail.com",
     status: "SHORTLISTED",
     assignedTaskStatus: "Access Granted via Drive",
     role: "In association with Yuvan Vision",
-    assignedDate: "2026-09-07",
-    projectCode: "VL-PRJ-2026-17",
-    driveFolderName: "Vardha_Task_PreetiYadav"
+    assignedDate: "2026-09-14",
+    projectCode: "VL-PRJ-2026-19",
+    driveFolderName: "Vardha_Task_PoojaJaiswal"
   }
 ];
 
@@ -175,6 +173,18 @@ export const PREVIOUSLY_SELECTED = [
     driveFolderName: "Vardha_Task_Palak"
   },
   {
+    id: "cand_16",
+    name: "Pankaj Yadav",
+    phone: "+91 93352 88731",
+    email: "pankajyadavldy@gmail.com",
+    status: "SHORTLISTED",
+    assignedTaskStatus: "Access Granted via Drive",
+    role: "In association with Yuvan Vision",
+    assignedDate: "2026-09-07",
+    projectCode: "VL-PRJ-2026-16",
+    driveFolderName: "Vardha_Task_PankajYadav"
+  },
+  {
     id: "cand_14",
     name: "Prashant Mishra",
     phone: "+91 7570019388",
@@ -186,6 +196,18 @@ export const PREVIOUSLY_SELECTED = [
     projectCode: "VL-PRJ-2026-14",
     driveFolderName: "Vardha_Task_PrashantMishra",
     certified: true
+  },
+  {
+    id: "cand_17",
+    name: "Preeti Yadav",
+    phone: "+91 70686 38759",
+    email: "preetiyadav7068@gmail.com",
+    status: "SHORTLISTED",
+    assignedTaskStatus: "Access Granted via Drive",
+    role: "In association with Yuvan Vision",
+    assignedDate: "2026-09-07",
+    projectCode: "VL-PRJ-2026-17",
+    driveFolderName: "Vardha_Task_PreetiYadav"
   },
   {
     id: "cand_10",

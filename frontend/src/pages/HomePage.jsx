@@ -6,6 +6,7 @@ import SelectedCandidates from '../components/SelectedCandidates';
 import InstructionsSection from '../components/InstructionsSection';
 import DriveAccessSection from '../components/DriveAccessSection';
 import CertificateSection from '../components/CertificateSection';
+import TestimonialSection from '../components/TestimonialSection';
 import Footer from '../components/Footer';
 import { SITE_CONFIG } from '../data/config';
 import { X, ExternalLink, HardDrive, ShieldCheck, Mail, Phone, Calendar, Folder } from 'lucide-react';
@@ -20,6 +21,7 @@ export default function HomePage() {
         <SelectedCandidates onViewDetails={c => setModalCandidate(c)} />
         <InstructionsSection />
         <CertificateSection />
+        {/* <TestimonialSection /> */}
         <DriveAccessSection />
       </main>
 

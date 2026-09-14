@@ -4625,6 +4625,412 @@ img { max-width: 100%; display: block; }
   }
 }
 
+/* ── Testimonial Section ────────────────────────────────────────────────── */
+.testimonial-section {
+  padding: 56px 0;
+  background: #F8FAF9;
+  border-top: 1px solid #E0ECE4;
+  border-bottom: 1px solid #E0ECE4;
+}
+
+.testimonial-header {
+  margin-bottom: 32px;
+}
+
+/* ── Video Testimonial Carousel ──────────────────────────────────────────── */
+.vtm-carousel-container {
+  margin-bottom: 36px;
+}
+
+.vtm-carousel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.vtm-carousel-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ECFDF5, #D1FAE5);
+  border: 1px solid #A7F3D0;
+  font-size: 11px;
+  font-weight: 700;
+  color: #047857;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.vtm-carousel-arrows {
+  display: flex;
+  gap: 8px;
+}
+
+.vtm-arrow-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #D5E8DC;
+  background: #fff;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vtm-arrow-btn:hover {
+  background: #047857;
+  color: #fff;
+  border-color: #047857;
+  box-shadow: 0 4px 12px rgba(4, 120, 87, 0.2);
+}
+
+.vtm-carousel-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+
+.vtm-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Video Card ──────────────────────────────────────────────────────────── */
+.vtm-card {
+  flex: 0 0 200px;
+  scroll-snap-align: start;
+  background: #fff;
+  border: 1px solid #E0ECE4;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vtm-card:hover {
+  border-color: #10B981;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(10, 58, 36, 0.08);
+}
+
+.vtm-video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: #0a0f0d;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.vtm-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Play overlay */
+.vtm-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+  transition: opacity 0.3s ease;
+}
+
+.vtm-play-overlay--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.vtm-play-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 3px;
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.vtm-video-wrapper:hover .vtm-play-btn {
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.45);
+}
+
+/* Pause overlay on hover while playing */
+.vtm-pause-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.vtm-video-wrapper:hover .vtm-pause-overlay {
+  opacity: 1;
+}
+
+/* Placeholder */
+.vtm-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(160deg, #0d1a14 0%, #0a2e1f 40%, #062316 100%);
+}
+
+.vtm-placeholder-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.12);
+  border: 2px dashed rgba(16, 185, 129, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #34D399;
+}
+
+.vtm-placeholder-text {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(167, 243, 208, 0.7);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Card info footer */
+.vtm-card-info {
+  padding: 10px 12px;
+}
+
+.vtm-card-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: #047857;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 2px;
+}
+
+.vtm-card-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: #062316;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .vtm-card {
+    flex: 0 0 170px;
+  }
+}
+
+@media (max-width: 640px) {
+  .vtm-card {
+    flex: 0 0 155px;
+  }
+
+  .vtm-carousel-header {
+    margin-bottom: 14px;
+  }
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.testimonial-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid #E0ECE4;
+  border-radius: 18px;
+  padding: 28px 24px 24px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 18px 18px 0 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.testimonial-card--green::before {
+  background: linear-gradient(90deg, #10B981, #34D399);
+}
+
+.testimonial-card--blue::before {
+  background: linear-gradient(90deg, #3B82F6, #60A5FA);
+}
+
+.testimonial-card--purple::before {
+  background: linear-gradient(90deg, #8B5CF6, #A78BFA);
+}
+
+.testimonial-card:hover {
+  border-color: #10B981;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(10, 58, 36, 0.08);
+}
+
+.testimonial-card:hover::before {
+  opacity: 1;
+}
+
+/* Quote icon */
+.testimonial-quote-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.testimonial-quote-icon--green {
+  background: linear-gradient(135deg, #ECFDF5, #A7F3D0);
+  color: #047857;
+  box-shadow: 0 3px 10px rgba(4, 120, 87, 0.1);
+}
+
+.testimonial-quote-icon--blue {
+  background: linear-gradient(135deg, #DBEAFE, #BFDBFE);
+  color: #1D4ED8;
+  box-shadow: 0 3px 10px rgba(29, 78, 216, 0.1);
+}
+
+.testimonial-quote-icon--purple {
+  background: linear-gradient(135deg, #EDE9FE, #DDD6FE);
+  color: #6D28D9;
+  box-shadow: 0 3px 10px rgba(109, 40, 217, 0.1);
+}
+
+/* Stars */
+.testimonial-stars {
+  display: flex;
+  gap: 3px;
+  color: #F59E0B;
+  margin-bottom: 14px;
+}
+
+/* Quote text */
+.testimonial-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* Divider */
+.testimonial-divider {
+  height: 1px;
+  background: #E0ECE4;
+  margin-bottom: 18px;
+}
+
+/* Author */
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.testimonial-avatar--green {
+  background: linear-gradient(135deg, #ECFDF5, #A7F3D0);
+  color: #047857;
+  border: 2px solid #A7F3D0;
+}
+
+.testimonial-avatar--blue {
+  background: linear-gradient(135deg, #DBEAFE, #BFDBFE);
+  color: #1D4ED8;
+  border: 2px solid #BFDBFE;
+}
+
+.testimonial-avatar--purple {
+  background: linear-gradient(135deg, #EDE9FE, #DDD6FE);
+  color: #6D28D9;
+  border: 2px solid #DDD6FE;
+}
+
+.testimonial-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #062316;
+}
+
+.testimonial-role {
+  font-size: 11px;
+  font-weight: 600;
+  color: #047857;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 1px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonial-section {
+    padding: 40px 0;
+  }
+
+  .testimonial-card {
+    padding: 22px 18px 20px;
+  }
+}
+
 /* ── Scrollbar ──────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 7px; }
 ::-webkit-scrollbar-track { background: #F2F7F4; }

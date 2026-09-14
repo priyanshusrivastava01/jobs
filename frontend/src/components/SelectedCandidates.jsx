@@ -64,7 +64,8 @@ export default function SelectedCandidates({ onViewDetails }) {
             </div>
             <h2 className="section-title">Shortlisted Candidates</h2>
             <p className="section-subtitle">
-              The candidates listed below have been officially shortlisted by Vardha Links. The two featured candidates are the <strong>latest shortlisted</strong> as of this update.
+              The candidates listed below have been officially shortlisted by Vardha Links.
+              {CURRENT_SHORTLISTED.length > 0 && " The featured candidates are the latest shortlisted as of this update."}
             </p>
           </div>
 
@@ -126,18 +127,22 @@ export default function SelectedCandidates({ onViewDetails }) {
           /* ── Normal view: two-tier layout ── */
           <>
             {/* SECTION 1 — Latest Shortlisted */}
-            <div className="latest-shortlisted-label">
-              <span className="latest-badge">
-                <span className="latest-badge-dot" />
-                NEWLY SHORTLISTED
-              </span>
-            </div>
+            {CURRENT_SHORTLISTED.length > 0 && (
+              <>
+                <div className="latest-shortlisted-label">
+                  <span className="latest-badge">
+                    <span className="latest-badge-dot" />
+                    NEWLY SHORTLISTED
+                  </span>
+                </div>
 
-            <div className="candidates-grid candidates-grid--two-col">
-              {CURRENT_SHORTLISTED.map(c => (
-                <CandidateCard key={c.id} candidate={c} onViewDetails={onViewDetails} />
-              ))}
-            </div>
+                <div className="candidates-grid candidates-grid--two-col">
+                  {CURRENT_SHORTLISTED.map(c => (
+                    <CandidateCard key={c.id} candidate={c} onViewDetails={onViewDetails} />
+                  ))}
+                </div>
+              </>
+            )}
 
             {/* SECTION 2 — Previously Selected preview card */}
             <div className="prev-section-wrapper">
