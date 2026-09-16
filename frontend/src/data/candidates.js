@@ -73,7 +73,8 @@ export const PREVIOUSLY_SELECTED = [
     role: "In association with Yuvan Vision",
     assignedDate: "2026-08-31",
     projectCode: "VL-PRJ-2026-11",
-    driveFolderName: "Vardha_Task_AbhishekSharma"
+    driveFolderName: "Vardha_Task_AbhishekSharma",
+    certified: true
   },
   {
     id: "cand_13",
@@ -98,7 +99,8 @@ export const PREVIOUSLY_SELECTED = [
     role: "In association with Yuvan Vision",
     assignedDate: "2026-08-31",
     projectCode: "VL-PRJ-2026-02",
-    driveFolderName: "Vardha_Task_AnupamTiwari"
+    driveFolderName: "Vardha_Task_AnupamTiwari",
+    certified: true
   },
   {
     id: "cand_05",
@@ -134,7 +136,8 @@ export const PREVIOUSLY_SELECTED = [
     role: "In association with Yuvan Vision",
     assignedDate: "2026-08-31",
     projectCode: "VL-PRJ-2026-01",
-    driveFolderName: "Vardha_Task_HarshitMaurya"
+    driveFolderName: "Vardha_Task_HarshitMaurya",
+    certified: true
   },
   {
     id: "cand_12",
@@ -146,7 +149,8 @@ export const PREVIOUSLY_SELECTED = [
     role: "In association with Yuvan Vision",
     assignedDate: "2026-08-31",
     projectCode: "VL-PRJ-2026-12",
-    driveFolderName: "Vardha_Task_KhalikKhan"
+    driveFolderName: "Vardha_Task_KhalikKhan",
+    certified: true
   },
   {
     id: "cand_08",
@@ -158,7 +162,8 @@ export const PREVIOUSLY_SELECTED = [
     role: "In association with Yuvan Vision",
     assignedDate: "2026-08-31",
     projectCode: "VL-PRJ-2026-08",
-    driveFolderName: "Vardha_Task_MohdUmar"
+    driveFolderName: "Vardha_Task_MohdUmar",
+    certified: true
   },
   {
     id: "cand_03",
@@ -219,7 +224,8 @@ export const PREVIOUSLY_SELECTED = [
     role: "In association with Yuvan Vision",
     assignedDate: "2026-08-31",
     projectCode: "VL-PRJ-2026-10",
-    driveFolderName: "Vardha_Task_PriyaPrajapati"
+    driveFolderName: "Vardha_Task_PriyaPrajapati",
+    certified: true
   },
   {
     id: "cand_07",
@@ -231,7 +237,8 @@ export const PREVIOUSLY_SELECTED = [
     role: "In association with Yuvan Vision",
     assignedDate: "2026-08-31",
     projectCode: "VL-PRJ-2026-07",
-    driveFolderName: "Vardha_Task_ShabahatRiyaz"
+    driveFolderName: "Vardha_Task_ShabahatRiyaz",
+    certified: true
   },
   {
     id: "cand_06",
@@ -243,7 +250,8 @@ export const PREVIOUSLY_SELECTED = [
     role: "In association with Yuvan Vision",
     assignedDate: "2026-08-31",
     projectCode: "VL-PRJ-2026-06",
-    driveFolderName: "Vardha_Task_SulekhaChauhan"
+    driveFolderName: "Vardha_Task_SulekhaChauhan",
+    certified: true
   },
   {
     id: "cand_09",
@@ -255,7 +263,8 @@ export const PREVIOUSLY_SELECTED = [
     role: "In association with Yuvan Vision",
     assignedDate: "2026-08-31",
     projectCode: "VL-PRJ-2026-09",
-    driveFolderName: "Vardha_Task_VishwajeetJaiswal"
+    driveFolderName: "Vardha_Task_VishwajeetJaiswal",
+    certified: true
   }
 ];
 

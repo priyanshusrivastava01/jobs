@@ -40,9 +40,9 @@ export default function HomePage() {
                   {modalCandidate.name.split(' ').map(n => n[0]).join('').substring(0, 2)}
                 </div>
                 <div>
-                  <div className="status-badge" style={{ marginBottom: '4px' }}>
+                  <div className={`status-badge ${modalCandidate.certified ? 'status-badge--certified' : ''}`} style={{ marginBottom: '4px' }}>
                     <span className="badge-dot"></span>
-                    STATUS: SELECTED
+                    {modalCandidate.certified ? 'STATUS: CERTIFIED' : 'STATUS: SELECTED'}
                   </div>
                   <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#062316' }}>
                     {modalCandidate.name}

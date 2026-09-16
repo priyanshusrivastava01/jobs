@@ -18,9 +18,9 @@ export default function CandidateCard({ candidate }) {
               <div className="candidate-role">{candidate.role || 'Shortlisted Candidate'}</div>
             </div>
           </div>
-          <div className="status-badge">
+          <div className={`status-badge ${candidate.certified ? 'status-badge--certified' : ''}`}>
             <span className="badge-dot"></span>
-            SHORTLISTED
+            {candidate.certified ? 'CERTIFIED' : 'SHORTLISTED'}
           </div>
         </div>
 
